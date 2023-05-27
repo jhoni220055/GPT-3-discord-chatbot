@@ -1,3 +1,4 @@
+const { KeepAlive } = require("./keep_alive")
 const { Client, Events, GatewayIntentBits } = require("discord.js")
 require("dotenv/config")
 const { OpenAIApi, Configuration } = require("openai")
@@ -22,8 +23,8 @@ client.once(Events.ClientReady, (clientUser) => {
 
 client.login(process.env.BOT_TOKEN)
 
-const BOT_CHANNEL = "1067560640526438510"
-const PAST_MESSAGES = 5
+const BOT_CHANNEL = "1111355218643398717"
+const PAST_MESSAGES = 10
 
 client.on(Events.MessageCreate, async (message) => {
     if (message.author.bot) return
